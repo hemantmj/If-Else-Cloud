@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HttpClient} from '@angular/common/http'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'workflows';
+  data:any;
+
+  constructor(public http:HttpClient) {
+    this.http.get("https://1.api.fy23ey06.careers.ifelsecloud.com/").subscribe((response)=>{
+      this.data=response;      
+      console.log(this.data);
+    })
+    
+
+   }
 }
