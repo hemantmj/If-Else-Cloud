@@ -1,1 +1,24 @@
-<p>total-balance works!</p>
+<div class="totalBalanceMain">
+    <div class="heading">
+        <h5>Total Balance</h5>
+        <svg class="dots" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+            <path fill="#646d7d"
+                d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+        </svg>
+    </div>
+    <div class="balance">
+        <h2>${{balance.total_balance}}</h2>
+    </div>
+    <div class="progress">
+        <mat-progress-bar [value]="balance.payment_done_percentage"></mat-progress-bar>
+        <div class="limit">
+            <div class="left">
+                <span>Monthly Payment Limit</span>
+            </div>
+            <div class="right">
+                <span>${{balance.payment_done_so_far}}</span><span
+                    class="last">/${{balance.monthly_payment_limit}}</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,68 @@
-<p>statistics works!</p>
+<div class="statisticsMain">
+    <div class="heading">
+        <h5>Money Statistics</h5>
+        <div class="dropIcon">
+            <select name="dropdown" id="">
+                <option value="monthly">Monthly</option>
+            </select>
+            <svg class="dots" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                <path fill="#646d7d"
+                    d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+            </svg>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="income">
+            <span>Total Income</span>
+            <h4>${{moneyStats.total_income.value}}</h4>
+            <div class="last">
+                <div class="growth">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512">
+                        <path fill="#039603"
+                            d="M576 0c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V32c0-17.7 14.3-32 32-32zM448 96c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V128c0-17.7 14.3-32 32-32zM352 224V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V224c0-17.7 14.3-32 32-32s32 14.3 32 32zM192 288c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V320c0-17.7 14.3-32 32-32zM96 416v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V416c0-17.7 14.3-32 32-32s32 14.3 32 32z" />
+                    </svg>
+                    <span>+{{moneyStats.total_income.trend}}% </span>
+                </div>
+                <span> from last month</span>
+            </div>
+        </div>
+        <mat-divider vertical></mat-divider>
+
+        <div class="expense">
+            <span>Total Expense</span>
+            <h4>${{moneyStats.total_expense.value}}</h4>
+            <div class="last">
+                <div class="growth">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512">
+                        <path fill="rgb(196, 25, 25)"
+                            d="M576 0c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V32c0-17.7 14.3-32 32-32zM448 96c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V128c0-17.7 14.3-32 32-32zM352 224V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V224c0-17.7 14.3-32 32-32s32 14.3 32 32zM192 288c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V320c0-17.7 14.3-32 32-32zM96 416v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V416c0-17.7 14.3-32 32-32s32 14.3 32 32z" />
+                    </svg>
+                    <span>+{{moneyStats.total_expense.trend}}% </span>
+                </div>
+                <span> from last month</span>
+            </div>
+        </div>
+        <mat-divider vertical></mat-divider>
+
+        <div class="investment">
+            <span>Total Investment</span>
+            <h4>${{moneyStats.total_investment.value}}</h4>
+            <div class="last">
+                <div class="growth">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512">
+                        <path fill="rgb(218, 142, 3)"
+                            d="M576 0c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V32c0-17.7 14.3-32 32-32zM448 96c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V128c0-17.7 14.3-32 32-32zM352 224V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V224c0-17.7 14.3-32 32-32s32 14.3 32 32zM192 288c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V320c0-17.7 14.3-32 32-32zM96 416v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V416c0-17.7 14.3-32 32-32s32 14.3 32 32z" />
+                    </svg>
+                    <span>+{{moneyStats.total_investment.trend}}% </span>
+                </div>
+                <span> from last month</span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [dataLabels]="chartOptions.dataLabels"
+            [plotOptions]="chartOptions.plotOptions" [yaxis]="chartOptions.yaxis" [legend]="chartOptions.legend"
+            [fill]="chartOptions.fill" [stroke]="chartOptions.stroke" [tooltip]="chartOptions.tooltip"
+            [xaxis]="chartOptions.xaxis"></apx-chart>
+    </div>
+</div>

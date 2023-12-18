@@ -9,12 +9,23 @@ import {HttpClient} from '@angular/common/http'
 export class AppComponent {
   title = 'workflows';
   data:any;
+  rowDataForTransactions:any;
+  balance:any;
+  moneyStats:any;
 
   constructor(public http:HttpClient) {
     this.http.get("https://1.api.fy23ey06.careers.ifelsecloud.com/").subscribe((response)=>{
       this.data=response;      
-      console.log(this.data);
+      if(this.data){
+        this.rowDataForTransactions=this.data.transactions;
+        this.balance=this.data.balance;
+        this.moneyStats=this.data.money_statistics;
+      }
+        console.log(this.data);
     })
+
+    
+    console.log(this.rowDataForTransactions);
     
 
    }

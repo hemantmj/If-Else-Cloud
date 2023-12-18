@@ -1,1 +1,18 @@
-Hemant
+<div class="main">
+  <div class="left">
+    <app-left-navigation></app-left-navigation>
+  </div>
+  <div class="right">
+    <div class="top">
+      <app-top-navigation></app-top-navigation>
+    </div>
+    <div class="bottom">
+      <app-static-column></app-static-column>
+      <div class="right">
+        <app-total-balance [balance]="balance"></app-total-balance>
+        <app-statistics [moneyStats]="moneyStats"></app-statistics>
+        <app-transaction [rowData]="rowDataForTransactions"></app-transaction>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,134 @@
+.statisticsMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    // margin-top: 0.5rem;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+
+
+    .middle{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        span{
+            font-family: system-ui;
+            font-weight: 700;
+            font-size: x-small;
+        }
+        .income{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.3rem;
+            h4{
+                font-family: system-ui;
+                font-weight: 700;
+    
+            }
+            span{
+                color: #646d7d;
+            }
+            .last{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            .growth{
+                    span{
+                        color: #039603;
+                        padding-right: 0.3rem;
+                    }
+                }
+            }
+        }
+        .expense{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.3rem;
+            h4{
+                font-family: system-ui;
+                font-weight: 700;
+    
+            }
+            span{
+                color: #646d7d;
+            }
+            .last{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            .growth{
+                    span{
+                        color: rgb(196, 25, 25);
+                        padding-right: 0.3rem;
+                    }
+                }
+            }
+        }
+        .investment{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.3rem;
+            h4{
+                font-family: system-ui;
+                font-weight: 700;
+    
+            }
+            span{
+                color: #646d7d;
+            }
+            .last{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            .growth{
+                    span{
+                        color: rgb(218, 142, 3);
+                        padding-right: 0.3rem;
+                    }
+                }
+            }
+        }
+    }
+  
+
+    .heading{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        h5 {
+            font-family: system-ui;
+            font-weight: 700;
+            color: rgb(3, 3, 56);
+          }
+
+          .dropIcon{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            select{
+                margin-right: 1rem;
+                padding: 0 1rem;
+                border: 0.1rem solid #d4dae4;
+                border-radius: 0.5rem;
+                
+                option{
+                    font-family: system-ui;
+                    font-weight: 700;
+                    color: rgb(3, 3, 56);
+        
+                }
+            }
+          }
+      
+    }
+}

@@ -10,6 +10,12 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { StaticColumnComponent } from './static-column/static-column.component';
 import { HttpClientModule } from '@angular/common/http';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatDividerModule} from '@angular/material/divider';
+import { NgApexchartsModule } from "ng-apexcharts";
+import { AgGridModule } from 'ag-grid-angular';
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +30,11 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressBarModule,
+    MatDividerModule,
+    NgApexchartsModule,
+    AgGridModule
   ],
   providers: [],
   bootstrap: [AppComponent]
